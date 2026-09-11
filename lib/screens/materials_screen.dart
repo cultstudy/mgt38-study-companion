@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'subjects_screen.dart';
 
 class MaterialsScreen extends StatelessWidget {
   const MaterialsScreen({super.key});
@@ -37,9 +38,12 @@ class MaterialsScreen extends StatelessWidget {
               subtitle: const Text('Subjects & study resources'),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('${semesters[index]} selected'),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SubjectsScreen(
+                      semester: semesters[index],
+                    ),
                   ),
                 );
               },

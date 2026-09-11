@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/materials_screen.dart';
 
 void main() {
   runApp(const Mgt38App());
@@ -37,7 +36,7 @@ class _HomeShellState extends State<HomeShell> {
 
   final pages = const [
     HomePage(),
-    MaterialsScreen(),
+    MaterialsPage(),
     RoutinePage(),
     ProgressPage(),
     MorePage(),
